@@ -6,6 +6,7 @@ import type {
 import type { Content, ToastOptions } from "vue3-toastify";
 import { h } from "vue";
 import { toast as notify } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 
 export const notifyError: Notification = (
   content: Content,
@@ -32,10 +33,11 @@ export const notifyConfirmation: Notification = (
   config: ConfirmationNotificationConfig,
   options?: ToastOptions
 ) => {
-  notify.info(makeConfirmContent(config), {
+  notify.warning(makeConfirmContent(config), {
     toastId: config.id,
     autoClose: false,
     closeOnClick: false,
+    closeButton: false,
     ...options,
   });
 };
@@ -45,10 +47,15 @@ export const removeNotification = (id: string | number) => {
 };
 
 function makeConfirmContent(config: ConfirmationNotificationConfig) {
-  const confirmMessage = h("p", config.message);
   const confirmButton = makeNotificationAction(config.confirm);
   const cancelButton = makeNotificationAction(config.cancel);
-  return h("div", [confirmMessage, confirmButton, cancelButton]);
+  return h("div", [
+    h("p", config.message),
+    h("div", { class: "confirm-button-container" }, [
+      confirmButton,
+      cancelButton,
+    ]),
+  ]);
 }
 
 function makeNotificationAction(config: NotificationActionConfig) {

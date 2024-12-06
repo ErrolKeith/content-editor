@@ -4,18 +4,21 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "dependencies": {
     "@editorjs/checklist": "^1.6.0",
     "@editorjs/code": "^2.9.3",
     "@editorjs/editorjs": "^2.30.7",
     "@editorjs/header": "^2.7.0",
+    "@editorjs/inline-code": "^1.5.1",
     "@editorjs/list": "^1.8.0",
+    "@editorjs/marker": "^1.4.0",
     "@editorjs/paragraph": "^2.9.0",
     "@editorjs/quote": "^2.7.4",
     "@editorjs/table": "^2.4.3",
-    "add": "^2.0.6",
+    "@wikimedia/codex-icons": "^1.17.0",
     "pinia": "^2.2.8",
     "vue": "^3.5.13",
     "vue-router": "4",
@@ -25,8 +28,11 @@
   "devDependencies": {
     "@types/add": "^2",
     "@vitejs/plugin-vue": "^5.2.1",
+    "jsdom": "^25.0.1",
+    "sass": "^1.82.0",
     "typescript": "~5.6.2",
     "vite": "^6.0.1",
+    "vitest": "^2.1.8",
     "vue-tsc": "^2.1.10"
   },
   "volta": {
