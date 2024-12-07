@@ -2,11 +2,12 @@
   "name": "content-editor",
   "version": "1.0.0",
   "scripts": {
-    "build": "vue-tsc -b && vite build && yarn build:docs",
+    "build": "vite build && yarn build:docs",
     "build:docs": "npx typedoc --entryPointStrategy Expand src",
     "dev": "vite",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "typecheck": "yarn tsc && vue-tsc"
   },
   "dependencies": {
     "@editorjs/checklist": "^1.6.0",
