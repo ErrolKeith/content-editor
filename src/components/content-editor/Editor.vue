@@ -34,7 +34,7 @@ const verifyBeforeClear = async () => {
     message: "Are you sure you want to delete the page?",
     confirm: {
       text: "O.K.",
-      clickHandler: async (event: MouseEvent) => {
+      clickHandler: async (_event: MouseEvent) => {
         loading.value = true;
 
         if (!editor.value) return;
@@ -50,7 +50,7 @@ const verifyBeforeClear = async () => {
     },
     cancel: {
       text: "Cancel",
-      clickHandler: (event: MouseEvent) => {
+      clickHandler: (_event: MouseEvent) => {
         removeNotification(notificationId);
       },
       classList: "cancel-action-button",
