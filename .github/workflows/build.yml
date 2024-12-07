@@ -1,7 +1,7 @@
 name: Build
 run-name: ${{ github.actor }} ran build
 on: [push]
-jobs:
+steps:
   runs-on: ubuntu-latest
   install-deps:
     - name: Check out repository code
