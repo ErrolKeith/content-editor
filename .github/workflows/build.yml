@@ -1,5 +1,5 @@
 name: Build
-run-name: ${{ github.actor }} ran build
+run-name: ${{ github.actor }} is building.
 on: [push]
 jobs:
   build:
@@ -18,3 +18,5 @@ jobs:
           cache-dependency-path: ./yarn.lock
       - name: Install dependencies
         run: yarn --frozen-lockfile
+      - name: Unit Test
+        run: yarn test
