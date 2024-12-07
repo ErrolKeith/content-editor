@@ -1,23 +1,11 @@
-import type { Content, ToastOptions } from "vue3-toastify";
-
-export type Notification = (content: Content, options?: ToastOptions) => void;
-
-export interface NotificationComposable {
-  notifyError: Notification;
-  notifySuccess: Notification;
-  notifyGeneral: Notification;
-  notifyConfirmation: (config: ConfirmationNotificationConfig) => void;
-  removeNotification: (id: string | number) => void;
-}
-
 export interface ConfirmationNotificationConfig {
   id: string | number;
   message: string;
-  confirm: NotificationActionConfig;
-  cancel: NotificationActionConfig;
+  confirm: NotificationButtonConfig;
+  cancel: NotificationButtonConfig;
 }
 
-export interface NotificationActionConfig {
+export interface NotificationButtonConfig {
   text: string;
   clickHandler: (event: MouseEvent) => void;
   classList: string;

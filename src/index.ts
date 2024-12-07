@@ -1,4 +1,5 @@
-import "./style.css";
+import "./styles/style.scss";
+
 import { initializeUi } from "./init";
 
 initializeUi({

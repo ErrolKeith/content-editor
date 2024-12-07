@@ -1,19 +1,16 @@
-import type { NotificationComposable } from "./types";
 import {
   notifyConfirmation,
   notifyError,
-  notifyGeneral,
+  notifyInfo,
   notifySuccess,
   removeNotification,
 } from "./notifications";
 
-import "vue3-toastify/dist/index.css";
-
-export default function useNotificationSystem(): NotificationComposable {
+export default function useNotificationSystem() {
   return {
     notifyError,
     notifySuccess,
-    notifyGeneral,
+    notifyInfo,
     notifyConfirmation,
     removeNotification,
   };

@@ -1,0 +1,55 @@
+$success-green: rgb(19, 168, 8);
+$error-red: rgb(240, 5, 5);
+$warning-orange: rgb(255, 153, 0);
+
+:root {
+    font-family: Arial,
+        Geneva,
+        Tahoma,
+        sans-serif;;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#editor-content-controls {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    z-index:2;
+
+    #save-button,
+    #clear-button {
+        border: none;
+        background: transparent;
+    }
+
+    #save-button:hover,
+    #clear-button:hover {
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+}
+
+.confirm-button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.cancel-action-button,
+.confirm-action-button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border-width: 2px;
+    border: solid;
+}
