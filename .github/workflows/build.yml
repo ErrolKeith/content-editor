@@ -18,5 +18,7 @@ jobs:
           cache-dependency-path: ./yarn.lock
       - name: Install dependencies
         run: yarn --frozen-lockfile
+      - name: Typecheck
+        run: yarn tsc
       - name: Unit Test
         run: yarn test
