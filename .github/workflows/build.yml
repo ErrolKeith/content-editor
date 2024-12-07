@@ -2,15 +2,14 @@ name: Build
 run-name: ${{ github.actor }} ran build
 on: [push]
 jobs:
-  steps:
-    runs-on: ubuntu-latest
-    install-deps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "yarn"
-      - name: Install dependencies
-        run: yarn --frozen-lockfile
+  runs-on: ubuntu-latest
+  install-deps:
+    - name: Check out repository code
+      uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: "yarn"
+    - name: Install dependencies
+      run: yarn --frozen-lockfile
