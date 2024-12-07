@@ -4,7 +4,7 @@ on: [push]
 jobs:
   steps:
     runs-on: ubuntu-latest
-    steps:
+    install-deps:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
