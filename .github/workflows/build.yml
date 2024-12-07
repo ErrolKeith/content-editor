@@ -1,15 +1,20 @@
 name: Build
 run-name: ${{ github.actor }} ran build
 on: [push]
-steps:
+jobs:
+  build:
   runs-on: ubuntu-latest
-  install-deps:
+  permissions:
+    id-token: write # This is required for requesting the JWT on github.
+    contents: read # This is required for actions/checkout
+  steps:
     - name: Check out repository code
       uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 20.0.0
       uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: 20.0.0
         cache: "yarn"
+        cache-dependency-path: ./yarn.lock
     - name: Install dependencies
       run: yarn --frozen-lockfile
