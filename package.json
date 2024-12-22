@@ -10,6 +10,7 @@
     "typecheck": "yarn tsc && vue-tsc"
   },
   "dependencies": {
+    "@codexteam/icons": "^0.3.3",
     "@editorjs/checklist": "^1.6.0",
     "@editorjs/code": "^2.9.3",
     "@editorjs/editorjs": "^2.30.7",
@@ -20,13 +21,13 @@
     "@editorjs/paragraph": "^2.9.0",
     "@editorjs/quote": "^2.7.4",
     "@editorjs/table": "^2.4.3",
-    "@wikimedia/codex-icons": "^1.17.0",
     "pinia": "^2.2.8",
     "vue": "^3.5.13",
     "vue3-toastify": "^0.2.5",
-    "yarn": "^1.22.22"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/node": "^22.10.2",
     "@vitejs/plugin-vue": "^5.2.1",
     "jsdom": "^25.0.1",
     "sass": "^1.82.0",

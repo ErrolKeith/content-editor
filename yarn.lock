@@ -61,7 +61,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@codexteam/icons@npm:^0.3.0, @codexteam/icons@npm:^0.3.2":
+"@codexteam/icons@npm:^0.3.0, @codexteam/icons@npm:^0.3.2, @codexteam/icons@npm:^0.3.3":
   version: 0.3.3
   resolution: "@codexteam/icons@npm:0.3.3"
   checksum: 10c0/336245f38a2b2a53626a552a5f0f32c822ee1265be6827670ba157c9fa101cb23e6c75e625aa067e4577c2d805e261f4ffcb61097ea94c034c0a3c0cae7d7271
@@ -877,6 +877,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^22.10.2":
+  version: 22.10.2
+  resolution: "@types/node@npm:22.10.2"
+  dependencies:
+    undici-types: "npm:~6.20.0"
+  checksum: 10c0/2c7b71a040f1ef5320938eca8ebc946e6905caa9bbf3d5665d9b3774a8d15ea9fab1582b849a6d28c7fc80756a62c5666bc66b69f42f4d5dafd1ccb193cdb4ac
+  languageName: node
+  linkType: hard
+
 "@types/unist@npm:*":
   version: 3.0.3
   resolution: "@types/unist@npm:3.0.3"
@@ -1140,13 +1149,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wikimedia/codex-icons@npm:^1.17.0":
-  version: 1.17.0
-  resolution: "@wikimedia/codex-icons@npm:1.17.0"
-  checksum: 10c0/8fd156bd0f6891a96857b4824b71cc0e4f251f8a3c471df53c02a93b9dfa0405dee853f6af9b2389390e30fe103fe98b2654287430b338819fe66b56a5c45572
-  languageName: node
-  linkType: hard
-
 "abbrev@npm:^2.0.0":
   version: 2.0.0
   resolution: "abbrev@npm:2.0.0"
@@ -1355,6 +1357,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "content-editor@workspace:."
   dependencies:
+    "@codexteam/icons": "npm:^0.3.3"
     "@editorjs/checklist": "npm:^1.6.0"
     "@editorjs/code": "npm:^2.9.3"
     "@editorjs/editorjs": "npm:^2.30.7"
@@ -1365,8 +1368,8 @@ __metadata:
     "@editorjs/paragraph": "npm:^2.9.0"
     "@editorjs/quote": "npm:^2.7.4"
     "@editorjs/table": "npm:^2.4.3"
+    "@types/node": "npm:^22.10.2"
     "@vitejs/plugin-vue": "npm:^5.2.1"
-    "@wikimedia/codex-icons": "npm:^1.17.0"
     jsdom: "npm:^25.0.1"
     pinia: "npm:^2.2.8"
     sass: "npm:^1.82.0"
@@ -1377,7 +1380,7 @@ __metadata:
     vue: "npm:^3.5.13"
     vue-tsc: "npm:^2.1.10"
     vue3-toastify: "npm:^0.2.5"
-    yarn: "npm:^1.22.22"
+    zod: "npm:^3.23.8"
   languageName: unknown
   linkType: soft
 
@@ -2842,6 +2845,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici-types@npm:~6.20.0":
+  version: 6.20.0
+  resolution: "undici-types@npm:6.20.0"
+  checksum: 10c0/68e659a98898d6a836a9a59e6adf14a5d799707f5ea629433e025ac90d239f75e408e2e5ff086afc3cace26f8b26ee52155293564593fbb4a2f666af57fc59bf
+  languageName: node
+  linkType: hard
+
 "unique-filename@npm:^3.0.0":
   version: 3.0.0
   resolution: "unique-filename@npm:3.0.0"
@@ -3231,12 +3241,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yarn@npm:^1.22.22":
-  version: 1.22.22
-  resolution: "yarn@npm:1.22.22"
-  bin:
-    yarn: bin/yarn.js
-    yarnpkg: bin/yarn.js
-  checksum: 10c0/8c77198c93d7542e7f4e131c63b66de357b7076ecfbcfe709ec0d674115c2dd9edaa45196e5510e6e9366d368707a802579e3402071002e1c9d9a99d491478de
+"zod@npm:^3.23.8":
+  version: 3.23.8
+  resolution: "zod@npm:3.23.8"
+  checksum: 10c0/8f14c87d6b1b53c944c25ce7a28616896319d95bc46a9660fe441adc0ed0a81253b02b5abdaeffedbeb23bdd25a0bf1c29d2c12dd919aef6447652dd295e3e69
   languageName: node
   linkType: hard
