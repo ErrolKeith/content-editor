@@ -1,6 +1,5 @@
 import type { ImageData } from "./validationSchema";
 import type { ToolSaver } from "../block-builder/types";
-import { camelCaseToKebabCase } from "^/utils/string-utils";
 
 export const imageToolSaver: ToolSaver<ImageData> = (
   blockContent: HTMLElement
@@ -15,7 +14,8 @@ export const imageToolSaver: ToolSaver<ImageData> = (
 
   return {
     url: img.src,
-    withBorder: img.classList.contains(camelCaseToKebabCase("withBorder")),
-    withCorners: img.classList.contains(camelCaseToKebabCase("withCorners")),
+    withBorder: img.classList.contains("with-border"),
+    withCorners: img.classList.contains("with-corners"),
+    withShadow: img.classList.contains("with-shadow"),
   };
 };
