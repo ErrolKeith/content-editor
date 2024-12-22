@@ -10,6 +10,7 @@ import InlineCode from "@editorjs/inline-code";
 import CheckList from "@editorjs/checklist";
 // @ts-ignore
 import Marker from "@editorjs/marker";
+import Image from "./blocks/Image";
 
 export function initializeEditor(
   blocks: OutputBlockData[],
@@ -22,6 +23,7 @@ export function initializeEditor(
     placeholder: props.placeholder,
     inlineToolbar: true,
     tools: {
+      image: Image,
       header: Header,
       list: List,
       table: Table,
