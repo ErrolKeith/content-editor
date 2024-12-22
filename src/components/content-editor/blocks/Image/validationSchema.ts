@@ -5,6 +5,7 @@ export const imageDataSchema = z.object({
   url: urlSchema,
   withBorder: z.boolean().optional(),
   withCorners: z.boolean().optional(),
+  withShadow: z.boolean().optional(),
 });
 
 export type ImageData = z.infer<typeof imageDataSchema>;
