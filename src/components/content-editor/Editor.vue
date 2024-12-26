@@ -42,6 +42,7 @@ const verifyBeforeClear = async () => {
         localStorage.removeItem("editor-lite");
 
         editor.value.clear();
+        window.location.reload;
 
         loading.value = false;
         removeNotification(notificationId);
@@ -63,7 +64,7 @@ async function save() {
   loading.value = true;
   const editorData = await editor.value.save();
   localStorage.setItem("editor-lite", JSON.stringify(editorData));
-  notifySuccess("Content Saved!", { autoClose: 1500 });
+  notifySuccess("Saved!", { autoClose: 1500 });
   loading.value = false;
 }
 
