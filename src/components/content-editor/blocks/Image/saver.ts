@@ -1,5 +1,5 @@
 import type { ImageData } from "./validationSchema";
-import type { ToolSaver } from "../block-builder/types";
+import type { ToolSaver } from "../utils/editor-block-builder";
 
 export const imageToolSaver: ToolSaver<ImageData> = (
   blockContent: HTMLElement

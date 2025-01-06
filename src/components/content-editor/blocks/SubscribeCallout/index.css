@@ -1,0 +1,10 @@
+.subscribe-callout {
+  background-color: lightgray;
+  padding-block: 3rem;
+  padding-inline: 1rem;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+}

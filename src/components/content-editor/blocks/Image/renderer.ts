@@ -1,6 +1,6 @@
 import "./index.css";
 
-import type { ContentRenderer } from "../block-builder/types";
+import type { ContentRenderer } from "../utils/editor-block-builder";
 import type { API } from "@editorjs/editorjs";
 import type { ImageData } from "./validationSchema";
 import { make } from "@editorjs/dom";

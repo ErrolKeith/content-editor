@@ -11,6 +11,7 @@ import CheckList from "@editorjs/checklist";
 // @ts-ignore
 import Marker from "@editorjs/marker";
 import Image from "./blocks/Image";
+import SubscribeCallout from "./blocks/SubscribeCallout";
 
 export function initializeEditor(
   blocks: OutputBlockData[],
@@ -24,6 +25,7 @@ export function initializeEditor(
     inlineToolbar: true,
     tools: {
       image: Image,
+      subscribeCallout: SubscribeCallout,
       header: Header,
       list: List,
       table: Table,

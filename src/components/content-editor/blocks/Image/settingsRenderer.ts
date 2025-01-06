@@ -1,5 +1,5 @@
 import type { BlockAPI, PopoverItemParams } from "@editorjs/editorjs";
-import type { SettingsRenderer } from "../block-builder/types";
+import type { SettingsRenderer } from "../utils/editor-block-builder";
 import type { MenuConfigItem } from "@editorjs/editorjs/types/tools";
 import { IconAddBorder } from "@codexteam/icons";
 import { IconImageShadow, IconRoundCorners } from "./icons";
