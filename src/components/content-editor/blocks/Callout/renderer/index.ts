@@ -3,11 +3,7 @@ import "../index.css";
 import type { ContentRenderer } from "../../utils/editor-block-builder";
 import type { API } from "@editorjs/editorjs";
 import type { CalloutData } from "../validationSchema";
-
-import { make } from "@editorjs/dom";
-import { buildSection } from "../../utils/editor-block-builder";
-
-const calloutSectionClassname = "callout";
+import { renderCalloutToolSection } from "./section";
 
 export const calloutToolRenderer: ContentRenderer<CalloutData> = (
   wrapper: HTMLElement,
@@ -17,12 +13,3 @@ export const calloutToolRenderer: ContentRenderer<CalloutData> = (
   wrapper.appendChild(renderCalloutToolSection(data, api));
   return wrapper;
 };
-
-function renderCalloutToolSection(data: CalloutData, api: API) {
-  const callout = make("p", "callout-text", {});
-  callout.innerHTML = data.calloutText ?? "Sample callout with emphasis info!";
-
-  const section = buildSection(calloutSectionClassname, [callout]);
-
-  return section;
-}
