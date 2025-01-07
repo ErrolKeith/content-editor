@@ -25,7 +25,6 @@ export function initializeEditor(
     inlineToolbar: true,
     tools: {
       image: Image,
-      callout: Callout,
       header: Header,
       list: List,
       table: Table,
