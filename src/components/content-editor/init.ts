@@ -15,7 +15,7 @@ import Callout from "./blocks/Callout";
 
 import useFeatureFlags from "^/composables/useFeatureFlags";
 
-const { isEnabled } = useFeatureFlags();
+const { flagIsEnabled } = useFeatureFlags();
 
 export function initializeEditor(
   blocks: OutputBlockData[],
@@ -37,7 +37,7 @@ export function initializeEditor(
       code: Code,
       inlineCode: InlineCode,
       marker: Marker,
-      ...(isEnabled("calloutblock") ? { callout: Callout } : undefined),
+      ...(flagIsEnabled("calloutblock") ? { callout: Callout } : undefined),
     },
     data: {
       blocks,

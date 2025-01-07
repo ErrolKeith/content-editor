@@ -5,17 +5,17 @@ const flags: Record<string, FeatureFlagEnvironments> = {
 };
 
 export default function useFeatureFlags() {
-  const isEnabled = (key: string) => {
+  const flagIsEnabled = (flag: string) => {
     const environment = import.meta.env.MODE;
 
-    if (!flags[key]) {
+    if (!flags[flag]) {
       return false;
     }
 
-    if (flags[key] === environment) return true;
+    if (flags[flag] === environment) return true;
 
     return false;
   };
 
-  return { isEnabled };
+  return { flagIsEnabled };
 }
