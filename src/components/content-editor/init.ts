@@ -13,6 +13,10 @@ import Marker from "@editorjs/marker";
 import Image from "./blocks/Image";
 import Callout from "./blocks/Callout";
 
+import useFeatureFlags from "^/composables/useFeatureFlags";
+
+const { isEnabled } = useFeatureFlags();
+
 export function initializeEditor(
   blocks: OutputBlockData[],
   props: {
@@ -33,6 +37,7 @@ export function initializeEditor(
       code: Code,
       inlineCode: InlineCode,
       marker: Marker,
+      ...(isEnabled("calloutblock") ? { callout: Callout } : undefined),
     },
     data: {
       blocks,
