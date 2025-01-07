@@ -2,7 +2,7 @@
   "name": "content-editor",
   "version": "1.0.0",
   "scripts": {
-    "build": "vite build && yarn build:docs",
+    "build": "vite build",
     "build:docs": "npx typedoc --entryPointStrategy Expand src",
     "dev": "vite",
     "preview": "vite preview",

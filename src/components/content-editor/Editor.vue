@@ -79,4 +79,37 @@ onMounted(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+#editor-content-controls {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(-10%);
+  z-index: 2;
+  background-color: rgba(211, 211, 211, 0.6);
+  border-radius: 0 0 0.5rem 0.5rem;
+
+  #save-button,
+  #clear-button {
+    border: none;
+    background: transparent;
+  }
+
+  #save-button:hover,
+  #clear-button:hover {
+    cursor: pointer;
+  }
+}
+
+.confirm-button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.cancel-action-button,
+.confirm-action-button {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+</style>

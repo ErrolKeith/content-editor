@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const urlSchema = z.string().url();
+export const emailSchema = z.string().email();
 
 export function dataValidator(data: unknown, schema: z.ZodSchema<object>) {
   const validData = schema.safeParse(data);

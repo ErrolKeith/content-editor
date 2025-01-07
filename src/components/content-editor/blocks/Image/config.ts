@@ -1,5 +1,5 @@
 import type { ImageData } from "./validationSchema";
-import type { BlockConfig } from "../block-builder/types";
+import type { BlockConfig } from "../utils/editor-block-builder";
 import { imageToolSaver } from "./saver";
 import { imageToolRenderer } from "./renderer";
 import { imageDataSchema } from "./validationSchema";

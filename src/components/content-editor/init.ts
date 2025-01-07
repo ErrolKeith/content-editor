@@ -11,6 +11,11 @@ import CheckList from "@editorjs/checklist";
 // @ts-ignore
 import Marker from "@editorjs/marker";
 import Image from "./blocks/Image";
+import Callout from "./blocks/Callout";
+
+import useFeatureFlags from "^/composables/useFeatureFlags";
+
+const { flagIsEnabled } = useFeatureFlags();
 
 export function initializeEditor(
   blocks: OutputBlockData[],
@@ -32,6 +37,7 @@ export function initializeEditor(
       code: Code,
       inlineCode: InlineCode,
       marker: Marker,
+      ...(flagIsEnabled("calloutblock") ? { callout: Callout } : undefined),
     },
     data: {
       blocks,
